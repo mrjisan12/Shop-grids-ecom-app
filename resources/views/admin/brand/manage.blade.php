@@ -5,7 +5,7 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title mb-4">Add Category Form</h4>
+                    <h4 class="card-title mb-4">Add Brand Form</h4>
                     <h4 class="text-success text-center">{{session('message')}}</h4>
                     <div class="col-12">
                         <div class="card">
@@ -21,21 +21,19 @@
                                         <th>Action</th>
                                     </tr>
                                     </thead>
-
-
                                     <tbody>
-                                    @foreach($categories as $category)
+                                    @foreach($brands as $brand)
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
-                                        <td>{{$category->name}}</td>
-                                        <td>{{$category->description}}</td>
-                                        <td><img src="{{asset($category->image)}}" alt="" height="50" width="70"></td>
-                                        <td>{{$category->status}}</td>
+                                        <td>{{$brand->name}}</td>
+                                        <td>{{$brand->description}}</td>
+                                        <td><img src="{{asset($brand->image)}}" alt="" height="50" width="70"></td>
+                                        <td>{{$brand->status}}</td>
                                         <td>
-                                            <a href="{{route('category.edit', ['id' => $category->id])}}" class="btn btn-success btn-lg">
+                                            <a href="{{route('brand.edit', ['id' => $brand->id])}}" class="btn btn-success btn-lg">
                                                 <i class="fa fa-edit"></i>
                                             </a>
-                                            <a href="{{route('category.delete', ['id' => $category->id])}}" class="btn btn-danger btn-lg" onclick="return confirm('Are You Sure to Delete This?');">
+                                            <a href="{{route('brand.delete', ['id' => $brand->id])}}" class="btn btn-danger btn-lg" onclick="return confirm('Are You Sure to Delete This?');">
                                                 <i class="fa fa-trash"></i>
                                             </a>
                                         </td>
@@ -45,7 +43,8 @@
                                 </table>
                             </div>
                         </div>
-                    </div> <!-- end col -->
+                    </div>
+                    <!-- end col -->
                 </div>
             </div>
         </div>

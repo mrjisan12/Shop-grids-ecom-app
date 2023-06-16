@@ -476,8 +476,8 @@
                             <span>Brand Module</span>
                         </a>
                         <ul class="sub-menu" aria-expanded="false">
-                            <li><a href="crypto-wallet.html">Add Brand</a></li>
-                            <li><a href="crypto-buy-sell.html">Manage Brand</a></li>
+                            <li><a href="{{route('brand.add')}}">Add Brand</a></li>
+                            <li><a href="{{route('brand.manage')}}">Manage Brand</a></li>
                         </ul>
                     </li>
 
