@@ -5,7 +5,7 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title mb-4">Add Category Form</h4>
+                    <h4 class="card-title mb-4">Add Unit Information</h4>
                     <h4 class="text-success text-center">{{session('message')}}</h4>
                     <div class="col-12">
                         <div class="card">
@@ -15,8 +15,8 @@
                                     <tr>
                                         <th>SL No</th>
                                         <th>Name</th>
+                                        <th>Code</th>
                                         <th>Description</th>
-                                        <th>Images</th>
                                         <th>Status</th>
                                         <th>Action</th>
                                     </tr>
@@ -24,18 +24,18 @@
 
 
                                     <tbody>
-                                    @foreach($categories as $category)
+                                    @foreach($units as $unit)
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
-                                        <td>{{$category->name}}</td>
-                                        <td>{{$category->description}}</td>
-                                        <td><img src="{{asset($category->image)}}" alt="" height="50" width="70"></td>
-                                        <td>{{$category->status}}</td>
+                                        <td>{{$unit->name}}</td>
+                                        <td>{{$unit->code}}</td>
+                                        <td>{{$unit->description}}</td>
+                                        <td>{{$unit->status}}</td>
                                         <td>
-                                            <a href="{{route('category.edit', ['id' => $category->id])}}" class="btn btn-success btn-lg">
+                                            <a href="{{route('unit.edit', ['id' => $unit->id])}}" class="btn btn-success btn-lg">
                                                 <i class="fa fa-edit"></i>
                                             </a>
-                                            <a href="{{route('category.delete', ['id' => $category->id])}}" class="btn btn-danger btn-lg" onclick="return confirm('Are You Sure to Delete This?');">
+                                            <a href="{{route('unit.delete', ['id' => $unit->id])}}" class="btn btn-danger btn-lg" onclick="return confirm('Are You Sure to Delete This?');">
                                                 <i class="fa fa-trash"></i>
                                             </a>
                                         </td>

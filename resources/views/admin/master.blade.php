@@ -487,8 +487,8 @@
                             <span>Unit Module</span>
                         </a>
                         <ul class="sub-menu" aria-expanded="false">
-                            <li><a href="email-inbox.html">Add Unit</a></li>
-                            <li><a href="email-read.html">Manage Unit</a></li>
+                            <li><a href="{{route('unit.add')}}">Add Unit</a></li>
+                            <li><a href="{{route('unit.manage')}}">Manage Unit</a></li>
                         </ul>
                     </li>
 
