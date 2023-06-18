@@ -35,12 +35,12 @@ class UnitController extends Controller
     public function update(Request $request, $id)
     {
         Unit::updateUnit($request, $id);
-        return redirect('/unit/manage')->with('message', 'units info update successfully.');
+        return redirect('/unit/manage')->with('message', 'Unit info update successfully.');
     }
 
     public function delete($id)
     {
         Unit::deleteUnit($id);
-        return back()->with('message', 'units info delete successfully.');
+        return back()->with('message', 'Unit info delete successfully.');
     }
 }

@@ -6,7 +6,7 @@
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title mb-4">Add Product Information</h4>
-                    <h4 class="text-success text-center">{{session('message')}}</h4>
+                    <h4 class="text-success text-center"><b>{{session('message')}}</b></h4>
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">

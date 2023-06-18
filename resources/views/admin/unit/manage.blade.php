@@ -6,11 +6,11 @@
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title mb-4">Add Unit Information</h4>
-                    <h4 class="text-success text-center">{{session('message')}}</h4>
+                    <h4 class="text-success text-center"><b>{{session('message')}}</b></h4>
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap text-center" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                     <thead>
                                     <tr>
                                         <th>SL No</th>
@@ -18,7 +18,7 @@
                                         <th>Code</th>
                                         <th>Description</th>
                                         <th>Status</th>
-                                        <th>Action</th>
+                                        <th>Take Action</th>
                                     </tr>
                                     </thead>
 
