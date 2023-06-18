@@ -7,7 +7,7 @@
                 <div class="card-body">
                     <h4 class="card-title mb-4">Add Sub Category Form</h4>
                     <h4 class="text-success text-center">{{session('message')}}</h4>
-                    <form action="{{route('brand.create')}}" method="POST" enctype="multipart/form-data">
+                    <form action="{{route('sub-category.create')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group row mb-4">
                             <label for="horizontal-firstname-input" class="col-sm-3 col-form-label">Category Name</label>

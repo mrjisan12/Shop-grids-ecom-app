@@ -17,7 +17,7 @@ class UnitController extends Controller
     public function create(Request $request)
     {
         Unit::newUnit($request);
-        return back()->with('message', 'Category info create successfully.');
+        return back()->with('message', 'Unit info create successfully.');
     }
 
     public function manage()
@@ -35,12 +35,12 @@ class UnitController extends Controller
     public function update(Request $request, $id)
     {
         Unit::updateUnit($request, $id);
-        return redirect('/unit/manage')->with('message', 'Category info update successfully.');
+        return redirect('/unit/manage')->with('message', 'units info update successfully.');
     }
 
     public function delete($id)
     {
         Unit::deleteUnit($id);
-        return back()->with('message', 'Category info delete successfully.');
+        return back()->with('message', 'units info delete successfully.');
     }
 }

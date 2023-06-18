@@ -14,7 +14,7 @@
                                     <thead>
                                     <tr>
                                         <th>SL No</th>
-                                        <th>Name</th>
+                                        <th>Category Name</th>
                                         <th>Description</th>
                                         <th>Images</th>
                                         <th>Status</th>
