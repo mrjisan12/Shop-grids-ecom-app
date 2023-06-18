@@ -15,6 +15,11 @@
     <link href="{{asset('/')}}admin/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
     <link href="{{asset('/')}}admin/assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
+
+    <!-- Summernote css -->
+    <link href="{{asset('/')}}admin/assets/libs/summernote/summernote-bs4.min.css" rel="stylesheet" type="text/css" />
+
+
     <!-- Responsive datatable examples -->
     <link href="{{asset('/')}}admin/assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
@@ -498,8 +503,8 @@
                             <span>Product Module</span>
                         </a>
                         <ul class="sub-menu" aria-expanded="false">
-                            <li><a href="invoices-list.html">Add Product</a></li>
-                            <li><a href="invoices-detail.html">Manage Product</a></li>
+                            <li><a href="{{route('product.add')}}">Add Product</a></li>
+                            <li><a href="{{route('product.manage')}}">Manage Product</a></li>
                         </ul>
                     </li>
 
@@ -741,6 +746,11 @@
 <script src="{{asset('/')}}admin/assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
 <script src="{{asset('/')}}admin/assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
 <script src="{{asset('/')}}admin/assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+
+<!-- Summernote js -->
+<script src="{{asset('/')}}admin/assets/libs/summernote/summernote-bs4.min.js"></script>
+<!-- init js -->
+<script src="{{asset('/')}}admin/assets/js/pages/form-editor.init.js"></script>
 
 <!-- Responsive examples -->
 <script src="{{asset('/')}}admin/assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>

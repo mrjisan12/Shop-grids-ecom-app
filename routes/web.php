@@ -6,6 +6,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SubCategoryController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\UnitController;
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -59,6 +60,13 @@ Route::middleware([
     Route::post('/unit/update/{id}', [UnitController::class, 'update'])->name('unit.update');
     Route::get('/unit/delete/{id}', [UnitController::class, 'delete'])->name('unit.delete');
 
+
+    Route::get('/product/add', [ProductController::class, 'index'])->name('product.add');
+    Route::post('/product/create', [ProductController::class, 'create'])->name('product.create');
+    Route::get('/product/manage', [ProductController::class, 'manage'])->name('product.manage');
+    Route::get('/product/edit/{id}', [ProductController::class, 'edit'])->name('product.edit');
+    Route::post('/product/update/{id}', [ProductController::class, 'update'])->name('product.update');
+    Route::get('/product/delete/{id}', [ProductController::class, 'delete'])->name('product.delete');
 
 
 });
