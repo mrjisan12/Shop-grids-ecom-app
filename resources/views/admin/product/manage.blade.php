@@ -35,16 +35,19 @@
                                             <td><b>{{$product->selling_price}}$</b></td>
                                             <td><img src="{{asset($product->image)}}" alt="" height="50" width="70"></td>
                                             <td>{{$product->status == 1 ? 'Published' : 'Unpublished'}}</td>
-                                            <td class="text-center">
-                                                <a href="{{route('product.detail', ['id' => $product->id])}}" class="btn btn-info btn-lg" title="View Detail">
+                                            <td class="d-flex">
+                                                <a href="{{route('product.detail', ['id' => $product->id])}}" class="btn btn-info btn-lg mr-1" title="View Detail">
                                                     <i class="fa fa-book-open"></i>
                                                 </a>
-                                                <a href="{{route('product.edit', ['id' => $product->id])}}" class="btn btn-success btn-lg" title="Edit Product">
+                                                <a href="{{route('product.edit', ['id' => $product->id])}}" class="btn btn-success btn-lg mr-1" title="Edit Product">
                                                     <i class="fa fa-edit"></i>
                                                 </a>
-                                                <a href="{{route('product.delete', ['id' => $product->id])}}" class="btn btn-danger btn-lg" title="Delete Product" onclick="return confirm('Are You Sure to Delete This?');">
-                                                    <i class="fa fa-trash"></i>
-                                                </a>
+                                                <form action="{{route('product.delete', ['id' => $product->id])}}" method="POST" onsubmit="return confirm('Are you sure to delete this?')">
+                                                    @csrf
+                                                    <button type="submit" class="btn btn-danger btn-lg">
+                                                        <i class="fa fa-trash"></i>
+                                                    </button>
+                                                </form>
                                             </td>
                                         </tr>
                                     @endforeach

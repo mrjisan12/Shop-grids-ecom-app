@@ -61,7 +61,7 @@
                                     </tr>
                                     <tr>
                                         <th>Long Description</th>
-                                        <th>{{$product->long_description}}</th>
+                                        <th>{!! $product->long_description !!}</th>
                                     </tr>
                                     <tr>
                                         <th>Feature Image</th>
@@ -69,23 +69,23 @@
                                     </tr>
                                     <tr>
                                         <th>Other Image</th>
-                                        <th>12234</th>
+                                        <th>
+                                            @foreach($product->otherImages as $otherImage)
+                                                <img src="{{asset($otherImage->image)}}" alt="" height="100" width="130"/>
+                                            @endforeach
+                                        </th>
                                     </tr>
                                     <tr>
                                         <th>Hit Count</th>
-                                        <th>12234</th>
-                                    </tr>
-                                    <tr>
-                                        <th>Product Id</th>
-                                        <th>12234</th>
+                                        <th>{{$product->hit_count}}</th>
                                     </tr>
                                     <tr>
                                         <th>Sales Count</th>
-                                        <th>12234</th>
+                                        <th>{{$product->sales_count}}</th>
                                     </tr>
                                     <tr>
                                         <th>Featured Status</th>
-                                        <th>12234</th>
+                                        <th>{{$product->featured_status}}</th>
                                     </tr>
                                 </table>
                             </div>
